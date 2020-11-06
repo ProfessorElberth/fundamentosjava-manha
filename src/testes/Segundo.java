@@ -18,7 +18,7 @@ public class Segundo {
 	}
 	
 	private static String obterSituacao(float sl){
-		return sl > Constante.SALARIO_LIMITE ? "rico" : "pobre";
+		return sl > Constante.SALARIO_LIMITE_POBRE ? "rico" : "pobre";
 	}
 	
 	private static void imprimir(int id) {

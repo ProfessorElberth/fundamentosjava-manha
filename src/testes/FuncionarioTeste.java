@@ -1,5 +1,7 @@
 package testes;
 
+import dominio.Funcionario;
+
 public class FuncionarioTeste {
 
 	public static void main(String[] args) {
