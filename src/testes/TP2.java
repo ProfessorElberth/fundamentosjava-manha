@@ -9,9 +9,9 @@ import dominio.Programador;
 import negocio.Funcionario;
 
 public class TP2 {
-	
-	private static Funcionario[] funcionarios;
-	
+	                                          //funcionarios[x] ou funcionarios[id] funcionarios[i] 
+	private static Funcionario[] funcionarios;//adm | prog | prog | adm | adm | null | null
+											  //0   | 1    | 2    | 3   | 4	  | 5    | 6
 	private static void imprimir(int id) {
 		System.out.println(funcionarios[id].toString());
 	}
@@ -30,7 +30,7 @@ public class TP2 {
 			somaSalarial = somaSalarial + funcionarios[x].calcularSalarioLiquido();
 		}		
 		float mediaSalarial = somaSalarial / qtde;
-		
+
 		return mediaSalarial;
 	}
 
