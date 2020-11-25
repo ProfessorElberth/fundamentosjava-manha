@@ -4,8 +4,40 @@ import auxiliar.Constante;
 import dominio.Estagiario;
 
 public class EstagiarioTeste {
+ 
+	private static Estagiario[] estagiarios; // obj1, obj2, null, null, null
 
-	private static Estagiario[] estagiarios;
+	private static String obterNivel(float salarioLiquido){
+		
+		if(salarioLiquido <= 1000) {
+			return "A";
+			
+		}else if (salarioLiquido <= 2000) {
+			return "B";
+			
+		}else if (salarioLiquido <= 3000) {
+			return "C";
+		}
+
+		return "D";
+	}
+	
+	private static void imprimir(){
+
+		for(Estagiario estagio : estagiarios) {
+
+			if(estagio != null) {
+
+				float salarioLiquido = estagio.calcularSalarioLiquido();
+
+				System.out.printf("%-10s | %10.2f | %s \n", 
+						estagio.getNome(),
+						salarioLiquido,
+						obterNivel(salarioLiquido)
+					);
+			}
+		}
+	}
 	
 	public static void main(String[] args) {
 		
@@ -21,7 +53,7 @@ public class EstagiarioTeste {
 			String nome = "elberth";
 			
 			Estagiario est = new Estagiario(nome, 42);
-			est.setSalario(1000);
+			est.setSalario(4000);
 			est.setDesconto(100);
 			est.setInstituicao("infnet");
 			est.exibir();
@@ -46,5 +78,7 @@ public class EstagiarioTeste {
 		System.out.println("TOTAL SALARIAL = " + somaSalarial);
 		System.out.println("ESTAGIÁRIO MAIOR SALÁRIO = " + nomeMaiorSalario);
 		System.out.println("VALOR MAIOR SALÁRIO = " + maiorSalario);
+		
+		imprimir();
 	}
 }
