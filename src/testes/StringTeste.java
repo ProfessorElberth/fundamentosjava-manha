@@ -88,28 +88,37 @@ public class StringTeste {
 		System.out.println(nome.charAt(6));		
 	}
 	private void case01() {
+		String[] texto = new String[4];
+		Estagiario[] estags = new Estagiario[2];
+		
+		char[] java = {'J','a','v','a','-','D','e','v','e','l','o','p','e','r'};
+		
+		texto[0] = new String();
+		texto[1] = new String("elberth moraes");
+		texto[2] = new String(java);
+		texto[3] = new String(java, 5, 9);
+
 		//foreach
-//		for(String txt : texto) {
-//			System.out.println("- " + txt);
-//		}
+		for(String txt : texto) {
+			System.out.println("- " + txt);
+		}
 		//for
-//		for(int i = 0; i < texto.length; i++) {
-//			System.out.println("- " + texto[i]);
-//		}
+		for(int i = 0; i < texto.length; i++) {
+			System.out.println("- " + texto[i]);
+		}
 		
 		//while
-//		int i = 0;
-//		while(i < texto.length) {
-//			System.out.println("- " + texto[i]);
-//			i++;
-//		}
+		int i = 0;
+		while(i < texto.length) {
+			System.out.println("- " + texto[i]);
+			i++;
+		}
 		
 		//dowhile
-//		int i = 0;
-//		do {
-//			System.out.println("- " + texto[i]);
-//			i++;
-//		} while (i < texto.length);
+		do {
+			System.out.println("- " + texto[i]);
+			i++;
+		} while (i < texto.length);
 		
 	}
 }
